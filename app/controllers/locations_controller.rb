@@ -31,6 +31,7 @@ end
   # POST /locations.json
   def create
     @location = Location.new(location_params)
+
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }
@@ -45,7 +46,6 @@ end
   # PATCH/PUT /locations/1
   # PATCH/PUT /locations/1.json
   def update
-    byebug
     respond_to do |format|
       if @location.update(location_params)
         format.html { redirect_to @location, notice: 'Location was successfully updated.' }
