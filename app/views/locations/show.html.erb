@@ -15,6 +15,15 @@
   <%= @location.longitude %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @location.description %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <img src=<%= @location.image %>>
+</p>
+
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
 
 
