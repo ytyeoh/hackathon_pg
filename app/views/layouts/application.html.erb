@@ -3,12 +3,40 @@
 <head>
   <title>Wowapp1</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="client/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="client/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="client/css/magnific-popup.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="client/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <div id="page" class="feed site">
 
+        <div class="app-container dashboard-page">
+
+            <nav class="main-header">
+                <div class="nav-wrapper">
+                  <a href="index.html" class="brand-logo">WOW APP</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ng-href="index.html">Home</a></li>
+                    <li><a ng-href="profile.html">Edit Profile</a></li>
+                    <li><a ng-href="#logout">Logout</a></li>
+                  </ul>
+                </div>
+            </nav>
 <%= yield %>
+<!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="client/js/materialize.js"></script>
+    <script src="client/js/imagesloaded.pkgd.min.js"></script>
+    <script src="client/js/isotope.pkgd.min.js"></script>
+    <script src="client/js/jquery.magnific-popup.min.js"></script>
+    <script src="client/js/script.js"></script>
 
+    
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
 </body>
 </html>

@@ -5,6 +5,29 @@
     <%= submit_tag "Search Near", :name => nil %>
   </p>
 <% end %>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    
+}
+
+function showPosition(position) {
+  document.getElementById("search").value = position.coords.latitude + "," + position.coords.longitude;
+}
+
+
+</script>
 <h1>Listing Locations</h1>
 
 <table>
@@ -34,3 +57,9 @@
 <br>
 
 <%= link_to 'New Location', new_location_path %>
+
+
+
+
+
+
