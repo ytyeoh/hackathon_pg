@@ -1,4 +1,4 @@
-json.extract! @location, :id, :address, :latitude, :longitude, :created_at, :updated_at
+json.extract! @location, :id, :address, :latitude, :longitude, :image, :description :created_at, :updated_at
 
 
 json.array!(@location.nearbys(10)) do |location|
