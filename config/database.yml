@@ -25,10 +25,12 @@ development:
   <<: *default
   database: wowapp1_development
 
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
+
   #username: wowapp1
 
   # The password associated with the postgres role (username).
@@ -57,7 +59,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+<<<<<<< HEAD
   database: wowapp1_test
+=======
+  database: wowapp_test
+>>>>>>> 913ba69ae530a5f999b27564c381e96000ed95f7
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +86,12 @@ test:
 #
 production:
   <<: *default
+<<<<<<< HEAD
   database: wowapp1_production
   username: wowapp1
   password: <%= ENV['WOWAPP1_DATABASE_PASSWORD'] %>
+=======
+  database: wowapp_production
+  username: wowapp
+  password: <%= ENV['WOWAPP_DATABASE_PASSWORD'] %>
+>>>>>>> 913ba69ae530a5f999b27564c381e96000ed95f7

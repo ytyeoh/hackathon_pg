@@ -6,7 +6,11 @@ class LocationsController < ApplicationController
   
 def index
   if params[:search].present?
+<<<<<<< HEAD
     @locations = Location.near(params[:search],  50)
+=======
+    @locations = Location.near(params[:search], 50, :order => :distance)
+>>>>>>> 913ba69ae530a5f999b27564c381e96000ed95f7
   else
     @locations = Location.all
   end
@@ -15,7 +19,10 @@ end
   # GET /locations/1
   # GET /locations/1.json
   def show
+<<<<<<< HEAD
 
+=======
+>>>>>>> 913ba69ae530a5f999b27564c381e96000ed95f7
   end
 
   # GET /locations/new
@@ -75,6 +82,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
+<<<<<<< HEAD
       params.require(:location).permit(:address, :latitude, :longitude, :image, :description)
+=======
+      params.require(:location).permit(:address, :latitude, :longitude)
+>>>>>>> 913ba69ae530a5f999b27564c381e96000ed95f7
     end
 end

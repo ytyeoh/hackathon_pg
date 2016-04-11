@@ -4,3 +4,4 @@ json.array!(@locations) do |location|
 end
 
 
+
